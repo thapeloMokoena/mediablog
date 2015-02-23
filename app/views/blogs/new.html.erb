@@ -1,0 +1,29 @@
+<%= form_tag do %>
+<div class="new"><center><h1>media</h1>
+
+<input type="text" class='' value="" name="url" placeholder="URL" /><br/>
+<input type="text" class='' value="" name="blogname" placeholder="BLOG TITLE" /><br/	>
+<input type="text" class='' value="" name="blogcont" placeholder="BLOG CONTENT" /><br/	>
+<input type="submit" class='btn-success' value="submit this form" name="sb" /></center></div>
+<% if @url %>
+
+	<%="url is: " + @url%>
+
+<% end %>
+
+<% if session[:name]  %>
+
+	<%= "session name " + session[:name] + '<br/>'%>
+
+<% end %>
+
+
+<% if flash['notice']  %>
+
+	<%= flash['notice'] + '<br/>' %>
+  
+    
+<% end %>
+
+
+<% end %>
